@@ -2,7 +2,10 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 const request = require('postman-request');
+
 const app = express();
+const port = process.env.PORT || 3000
+
 const weatherUrl = 'http://api.weatherstack.com/current?access_key=5b8c6bea57e7891a50574748f4964a8d&query='
 
 // Define paths for Express config
@@ -88,6 +91,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up and running on port 3000.')}
+app.listen(port, () => {
+    console.log('Server is up and running on port ' + port +'.')}
 )

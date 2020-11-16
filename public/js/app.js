@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const location = search.value
     statusSlot.textContent = 'Loading...'
-    fetch('http://localhost:3000/weather?location=' + location).then((response) => {
+    fetch('/weather?location=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 statusSlot.textContent = 'Is that a real place? I couldn\'t find it.'
