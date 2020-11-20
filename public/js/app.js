@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (event) => {
                 statusSlot.textContent = 'Is that a real place? I couldn\'t find it.'
             }
             statusSlot.textContent = 'Got it! Here you go:'
-            resultSlot.textContent = 'In ' + data.location.name + ', ' + data.location.country + ' it is currently ' + data.current.temperature + ' degrees Celcius, but feels like ' + data.current.feelslike
+            resultSlot.textContent = 'In ' + data.location.name + ', ' + data.location.country + ' it is currently ' + data.current.temperature + ' degrees Celsius, but feels like ' + data.current.feelslike + '. The current wind speed is '+data.current.wind_speed+' meters per second.' 
             console.log(data)
         })
     })
